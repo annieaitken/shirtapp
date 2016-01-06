@@ -50,3 +50,8 @@ group :production do
 	gem 'rails_12factor'
 	gem 'pg'
 end
+
+group :test, :production do
+	gem 'sqlite3'
+end
+
