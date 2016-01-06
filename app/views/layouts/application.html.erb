@@ -53,16 +53,99 @@
   </head>
 <body>
 
-<nav>
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
 
-<h1>Brooklyn Shirts</h1>
-<h2>Where only people from Brooklyn shop</h2>
+
+
+ <body data-spy="scroll" data-target=".navbar">
+
+
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-xs" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+          data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav nav-right">
+               <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div> <!-- end navcontainer -->
+    </nav> <!-- navbar ends here -->
+
+<!-- SMALL navbar starts here -->
+    <nav class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+          data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav nav-right">
+               <li><a href="#">Home</a></li>
+                <li><a href="#about_small">About</a></li>
+                <li><a href="#work_small">Work</a></li>
+                <li><a href="#contact_small">Contact</a></li>
+            </ul>
+          </div>
+        </div>    
+      </div> <!-- end navcontainer -->
+    </nav> <!-- navbar ends here -->
+
+<body>
+<!--HOME-->
+
+    <div class="container-fluid img-responsive hidden-sm hidden-xs" id="panel-main">
+
+      <div class="homename" id="home">
+
+        <h1>Video &#8226 Design &#8226 Code</h1>
+
+        <p class="lead">I am a Brooklyn-based designer interested in working on creative projects with innovative clients.</p>
+          <div class="arrow">
+            <a href="#about"><span class="glyphicon glyphicon-chevron-down"></span></a>
+          </div>
+
+      </div>
+
+      
+
+    </div><!--End Home Conatiner-->
+
+
+
+<!--ABOUT-->
+
+    <div class="container-fluid aboutcontainer hidden-sm hidden-xs" id="about"> 
+        
+        <div class="abouttext col-md-6 col-xs-12">
+        <h3>Annie Aitken</h3>
+        <h4>Designer</h4>
+        <p>My first love will always be video editing, but over the years I have developed a passion for all things graphic design, animation, and web development.</p>
+        <p>Lover of dogs, tea, and minimalism.</p>
+      </div>
+
+      <div class="aboutimage col-md-6 col-xs-12" data-spy="scroll" data-target=".btn">
+        <img src="img/me.png">
+      </div>
+
+      <div class="container col-md-12">
+    <a href="#work" id="button1">SEE MY WORK</a>
+    </div>
+    </div><!--END about container-->
 
 <%= image_tag("racebike.jpg", class: "img-responsive my-image") %>
 
