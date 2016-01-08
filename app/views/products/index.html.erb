@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+
+
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-sm-2 col-md-4">
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+      <h2><%= product.name %></h2>
+      <p><%= product.description %></p>
+      <strong><%= product.price %></strong>
+    </div><!-- /col -->
+    <% end %>
+  </div>
+</div>
+
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
