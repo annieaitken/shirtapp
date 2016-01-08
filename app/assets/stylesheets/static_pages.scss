@@ -1,3 +1,109 @@
+html, body {height:100%;}
+body {margin:0;padding:0;}
+
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #FFF;
+}
+
+
+.navbar-inverse {
+	width: 100%;
+	top:0;
+  	padding: 0 40px;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+  	color: black;
+  	font-weight: 400;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+}
+
+
+.navbar {
+	background-color: rgba(255,255,255,0);
+	z-index: 1;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0px;
+    position: absolute;
+
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+
+.navbar-toggle {
+	background-color: black;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #BE9837;
+}
+
+.nav {
+	padding-right: 20px;
+}
+/*HOME*/
+
+#panel-main {
+    text-align: center;
+
+}
+
+
 h1 {
-	color: blue;
+	font-family: 'Pacifico';
+	padding: 30px;
+	font-size: 7em;
+
+}
+
+.homename > h1 {
+	padding-top: 100px;
+}
+
+
+
+h3 {
+		color: black;
+		font-weight: 300;
+		text-align: center;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-size: 2em;
+}
+
+p {
+		color: black;
+		font-weight: 300;
+		text-align: center;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-size: 1em;
+}
+
+.my-image {
+	height: 200px;
+	width: 200px;
+	padding-top: 20px;
+}
+
+footer{
+	margin: 20px;
+	text-alin:center;
 }
