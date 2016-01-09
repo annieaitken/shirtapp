@@ -5,19 +5,22 @@
 
 
 <div class="container">
-  <div class="row">
+  <div class="row product_section">
     <% @products.each do |product| %>
     <div class="col-sm-2 col-md-4">
       <%= image_tag(product.image_url, class: "img-responsive") %>
       <h2><%= product.name %></h2>
       <p><%= product.description %></p>
-      <strong><%= product.price %></strong>
+      <strong><p><%= product.price %></p></strong>
+
     </div><!-- /col -->
     <% end %>
   </div>
 </div>
 
 
+
 <br>
+
 
 <%= link_to 'New Product', new_product_path %>
