@@ -106,7 +106,7 @@ p {
 
 footer{
 	margin: 20px;
-	text-alin:center;
+	text-align:center;
 }
 
 .carousel-caption {
@@ -123,3 +123,25 @@ footer{
 	height: 20%;
 	margin: 0 auto;
 }
+
+.search {
+	color: black;
+	font-weight: 400;
+	text-align: center;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
+}
+
+.searchbar {
+	padding-top: 12.5px;
+	padding-left: 5px;
+}
+
+form {
+	text-align: center;
+	color: black;
+	font-weight: 400;
+	text-align: center;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
+	text-transform: uppercase;
+}
+

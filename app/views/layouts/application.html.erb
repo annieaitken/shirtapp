@@ -46,8 +46,15 @@
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav nav-right">
                <li><a href="/">Home</a></li>
-                <li><a href="products">Products</a></li>
-                <li><a href="static_pages/contact">Contact</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/static_pages/contact">Contact</a></li>
+                <li class="searchbar">
+                  <%= form_tag("/products", method: "get") do %>
+                    <%= label_tag(:q, "SEARCH FOR:", class: "search") %>
+                    <%= text_field_tag(:q) %>
+                    <%= submit_tag("SEARCH", class: "search") %>
+                  <% end %>
+                </li>
             </ul>
           </div>
         </div>    
