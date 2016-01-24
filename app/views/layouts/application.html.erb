@@ -15,10 +15,12 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
@@ -72,8 +74,8 @@
       </div> <!-- end navcontainer -->
     </nav> <!-- navbar ends here -->
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+
 <!--HOME-->
 
     <div class="container-fluid hidden-sm hidden-xs" id="panel-main">
@@ -85,7 +87,22 @@
 
         <p>Handcrafted with love, delivered straight to your door.</p>
 
-      </div>     
+      </div>   
+
+      <!-- ALERTS -->
+    <% if notice %>
+      <div class="alert alert-warning" role="alert" id="notice">
+      <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-danger" role="alert" id="alert">
+      <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+
     </div><!--End Home Conatiner-->
 <%= yield %>
 
