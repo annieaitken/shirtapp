@@ -24,6 +24,15 @@ body {margin:0;padding:0;}
 	text-decoration: none;
 }
 
+
+li {
+  	color: black;
+  	font-weight: 400;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
 }
@@ -82,7 +91,7 @@ h2 {
 
 
 
-h3 {
+h4 {
 		color: black;
 		font-weight: 300;
 		text-align: center;
@@ -146,8 +155,13 @@ form {
 	text-transform: uppercase;
 }
 
-.row,
+.contact_row,
 .panel {
+	margin: 0 auto;
+	width: 30%;
+}
+
+.products_row {
 	margin: 0 auto;
 	width: 70%;
 }
@@ -155,4 +169,15 @@ form {
 .btn {
 	margin: 0 auto;
 	
+}
+
+/* PRODUCTS SHOW PAGE */
+
+h3 {
+	font-family: 'Pacifico';
+	text-align: center;
+}
+
+.rated {
+	text-align:center;
 }

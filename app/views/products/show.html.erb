@@ -1,29 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="container-fluid">
+  <div class="row">
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <div class="col-md-6">
+      <%= image_tag(@product.image_url, size: '375x500', class: 'img-thumbnail img-zoom', data_zoom_image: @product.image_url) %>
+    </div>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <div class="col-md-6">
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+    <h3><%= @product.name %></h3>
 
+    <h4><%= @product.description %></h4>
+        <h4>
+        <strong>Price:</strong>
+        <%= @product.price %>
+        </h4>
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    </div>
+
+    <div class="col-md-12">
+
+    <%= render 'new_comment' %>
+    <%= render 'comment' %>
+
+    <%= will_paginate @comments, :page_links => false %>
+
+
+    </div>
+
+
+
+</div>
+</div>
+<br><br>
+<p>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</p>

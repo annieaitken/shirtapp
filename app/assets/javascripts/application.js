@@ -25,3 +25,7 @@ window.setTimeout(function() {
         $(this).remove(); 
     });
 }, 5000);
+
+$(document).on('ready page:load', function(){
+    $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+});

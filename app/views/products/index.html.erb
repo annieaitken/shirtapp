@@ -5,13 +5,14 @@
 
 
 <div class="container">
-  <div class="row product_section">
+  <div class="products_row product_section">
     <% @products.each do |product| %>
     <div class="col-sm-2 col-md-4">
       <%= image_tag(product.image_url, class: "img-responsive") %>
-      <h2><%= product.name %></h2>
+      <h4><%= product.name %></h4>
       <p><%= product.description %></p>
       <strong><p><%= product.price %></p></strong>
+      
       <p><%= link_to 'Edit', edit_product_path(product) %></p>
       <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><p>
 
@@ -22,6 +23,7 @@
 
 <br>
 
-
-
+<br><br>
+<p>
 <%= link_to 'New Product', new_product_path %>
+</p>
