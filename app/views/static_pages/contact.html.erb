@@ -1,4 +1,4 @@
-<h1>Contact Us</h1>
+<h2>Contact Us</h2>
 
 <%= flash[:notice] %>
 
@@ -15,8 +15,10 @@
     <div class="form-group">
       <%= label_tag :message, "Message" %>
       <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-    </div>      
+    </div>  
+    <%= submit_tag "Send", class: "btn btn-info btn-sm" %>   
+<% end %>    
   </div>
+
 </div>
-<%= submit_tag "Send", class: "btn btn-info btn-sm" %>   
-<% end %>
+

@@ -10,7 +10,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -23,63 +24,64 @@
 
 
 
- <body data-spy="scroll" data-target=".navbar">
+ <body>
 
 
     <!-- navbar starts here -->
-    <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-xs" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header pull-right">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" 
-          data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav nav-right">
-               <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/static_pages/contact">Contact</a></li>
-                <li class="searchbar">
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav nav-right" id="myNav">
+    <li><a href="/">BROOKLYN BABES</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/static_pages/contact">Contact</a></li>
+
+                    <li class="searchbar">
                   <%= form_tag("/products", method: "get") do %>
                     <%= label_tag(:q, "SEARCH FOR:", class: "search") %>
                     <%= text_field_tag(:q) %>
                     <%= submit_tag("SEARCH", class: "search") %>
                   <% end %>
                 </li>
-            </ul>
-<!-- Authentication login and log out -->
-            <ul class="nav pull-right">
+  </ul>
+              <ul class="nav navbar-default pull-right">
               <li>
               <% if user_signed_in? %>
-             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+             <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>
               <% else %>
-              <%= link_to('Login', new_user_session_path) %>
+              <%= link_to('LOGIN', new_user_session_path) %>
               <% end %>
               </li>
             </ul>
+  </div>
+</nav>
 
-          </div>
-        </div>    
-      </div> <!-- end navcontainer -->
-    </nav> <!-- navbar ends here -->
+
+    <div class="bluebar">
+      <div class="row">
+        <div class="col-md-6">
+         <p><i class="fa fa-truck"></i><strong> Free Shipping</strong> on all orders over $100</p>
+        </div>
+        
+        <div class="col-md-6">
+        <p><i class="fa fa-globe"></i><strong> Worldwide Delivery.</strong> Same day shipping</p>
+        </div>
+      </div>
+    </div>
+
+
 
 
 
 <!--HOME-->
 
-    <div class="container-fluid hidden-sm hidden-xs" id="panel-main">
+    <div class="container-fluid" id="panel-main">
 
-      <div class="homename container-fluid" id="home">
 
-        <h1>Brooklyn &#8226 Bites</h1>
-        <h4>Custom made sweets by local artisans in Brooklyn, NY</h4>
+        <h1>Brooklyn &#8226 Babes</h1>
 
-        <p>Handcrafted with love, delivered straight to your door.</p>
-
-      </div>   
 
       <!-- ALERTS -->
     <% if notice %>
@@ -98,11 +100,15 @@
     </div><!--End Home Conatiner-->
 <%= yield %>
 
-        <footer class="container-fluid">
-          <p>&copy; 2016 Brooklyn Bites</p>
-        </footer> 
-
-
+<footer class="container-fluid">
+  <div class="col-md-4 about">
+    <h5>ABOUT BROOKLYN BABES</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus est, elementum nec volutpat a, ornare ac ligula. Nullam porttitor ut libero id maximus. Quisque tincidunt posuere lacus in aliquet. Suspendisse iaculis odio at nulla gravida, eu mollis magna tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis consectetur libero augue, et aliquet neque convallis eget.</p>
+  </div>
+  <div class="col-md-8 icons">
+    <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-instagram fa-2x"></i> <i class="fa fa-dribbble fa-2x"></i> <i class="fa fa-vimeo fa-2x"></i>
+  </div>
+</footer>
 
 
 </body>

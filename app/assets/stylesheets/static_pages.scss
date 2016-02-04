@@ -1,158 +1,135 @@
 html, body {height:100%;}
 body {margin:0;padding:0;}
 
-
-.navbar-inverse .navbar-nav > .active > a, 
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
-  background-color: #FFF;
-}
-
-
-.navbar-inverse {
-	width: 100%;
-	top:0;
-  	padding: 0 40px;
-}
-
+/*NAVIGATION*/
 
 .navbar-default .navbar-nav > li > a {
-  	color: black;
-  	font-weight: 400;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
+    color: black;
+    font-weight: 400;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar-default {
+  background-color: #FFF;
+  border: none;
+  margin: 0;
+}
+
+ul.nav a:hover { 
+	background-color: #fff !important;
+	color: #72D8C4 !important;
+}
+
+ul.nav a {
+	color:#000 !important;
 }
 
 
-li {
-  	color: black;
-  	font-weight: 400;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
-}
+/*Blue Bar*/
 
-.navbar-default .navbar-nav > li > a:hover {
-  color: white;
-}
-
-
-.navbar {
-	background-color: rgba(255,255,255,0);
-	z-index: 1;
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0px;
-    border: none;
-    border-radius: 0px;
-    position: absolute;
+.bluebar {
+	background-color: #72D8C4;
+	margin-top: 50px;
+	text-align: center;
+	padding-top: 20px;
 
 }
 
-.navbar-default .navbar-toggle {
-	border-color: transparent;
-}
+/*TEXTS*/
 
-.navbar-toggle {
-	background-color: black;
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-	background-color: white;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #BE9837;
-}
-
-.nav {
-	padding-right: 20px;
-}
-/*HOME*/
-
-#panel-main {
-    text-align: center;
-
-}
-
-
-h1,
-h2 {
-	font-family: 'Pacifico';
-	padding: 30px;
+h1 {
+	font-family: 'Shadows Into Light';
 	font-size: 7em;
-
+	text-align: center;
 }
-
-.homename > h1 {
-	padding-top: 100px;
-}
-
 
 
 h4 {
-		color: black;
+		color: #fff;
 		font-weight: 300;
 		text-align: center;
 		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 		font-size: 2em;
 }
 
+h2 {	
+	font-family: 'Shadows Into Light';
+	text-align: center;
+	font-size: 3em;
+	}
+
 p {
-		color: black;
 		font-weight: 300;
-		text-align: center;
 		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-		font-size: 1em;
 }
 
-
-.rickroll {
-	margin: 0 auto;
-	text-align: center;
-
-}
-
-footer{
-	margin: 20px;
-	text-align:center;
-}
-
-.carousel-caption {
-	color: black;
-	font-weight: 300;
-	text-align: center;
-	font-family: 'Pacifico', Helvetica, Arial, sans-serif;
-	font-size: 2em;
+h3 {
+	font-family: 'Shadows Into Light';
+	font-size: 3em;
 	
 }
 
-.carousel {
-	width: 20%;
-	height: 20%;
-	margin: 0 auto;
+
+/*SLIDERS*/
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 70%;
+	margin: auto;
+	}
+
+#myCarousel {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 
-.search {
-	color: black;
-	font-weight: 400;
-	text-align: center;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
+/*TRENDING SECTION*/
+
+
+.trending_text {
+	padding-top: 20px;
 }
+
+.trending_row {
+	padding: 40px;
+}
+
+/*PHOTO MESSAGE*/
+
+.photo_message {
+	background-image: url("/assets/boots.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 395px;
+	margin-top: 30px;
+}
+
+
+.photo_text {
+	background-color: #373737;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 140px;
+	padding: 20px;
+}
+
 
 .searchbar {
 	padding-top: 12.5px;
 	padding-left: 5px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
 }
 
 form {
-	text-align: center;
 	color: black;
 	font-weight: 400;
-	text-align: center;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
 	text-transform: uppercase;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .contact_row,
@@ -163,21 +140,39 @@ form {
 
 .products_row {
 	margin: 0 auto;
+	padding-top: 20px;
 	width: 70%;
 }
 
-.btn {
-	margin: 0 auto;
-	
-}
 
 /* PRODUCTS SHOW PAGE */
 
-h3 {
-	font-family: 'Pacifico';
-	text-align: center;
-}
 
 .rated {
 	text-align:center;
 }
+
+footer {
+	background-color: #373737;
+	height: 300px;
+	color: #fff;
+}
+
+.about {
+	padding:40px;
+	color: #fff;
+}
+
+.icons {
+	padding:40px;
+	text-align: center;
+}
+
+.under_product {
+	text-align: center;
+}
+
+.product_deats {
+	text-align: left;
+}
+
