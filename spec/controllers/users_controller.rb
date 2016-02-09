@@ -3,7 +3,8 @@ require 'rails_helper'
 describe UsersController, :type => :controller do
 
 	before do
-	@user = User.create!(email: "annie@annit.com", password: "1234")
+	# @user = User.create!(email: "annie@annit.com", password: "1234")
+	@user = FactoryGirl.create(:user)
 	@user2 = User.create!(email: "rory@annit.com", password: "12345")
 	end
 
