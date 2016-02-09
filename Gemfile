@@ -59,6 +59,21 @@ gem 'cancancan'
 
 gem 'will_paginate', '~> 3.0.6'
 
+gem 'guard'
+
+gem 'guard-rspec', require: false
+
+gem 'spork-rails'
+
+gem 'guard-spork'
+
+
+
+
+
+
+
+
 
 
 
