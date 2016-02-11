@@ -67,6 +67,8 @@ gem 'spork-rails'
 
 gem 'guard-spork'
 
+gem 'stripe'
+
 
 
 
