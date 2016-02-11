@@ -11,9 +11,7 @@ class PaymentsController < ApplicationController
       :amount => (@product.price * 100).to_i,
       :currency => "usd",
       :source => token,
-      :description => params[:stripeEmail],
-      format.html { redirect_to @product, notice: 'Thank you for your purchase.' }
-	  format.json { render :show, status: :ok, location: @product }
+      :description => params[:stripeEmail]
     )
 
       if charge.paid
