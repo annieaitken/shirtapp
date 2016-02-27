@@ -69,6 +69,8 @@ gem 'guard-spork'
 
 gem 'stripe'
 
+gem 'angularjs-rails'
+
 
 
 
