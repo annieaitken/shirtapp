@@ -1,18 +1,19 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
- def index
-  if params[:q]
-    search_term = params[:q]
-    # return our filtered list here
-    @products = Product.where("name LIKE ?", "%#{search_term}%")
-  else
-    @products = Product.all
-  end
+  def index
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
 
-end
+    respond_with @products
+  end
 
 
 
