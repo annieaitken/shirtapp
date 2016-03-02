@@ -7,6 +7,8 @@
 
 <br><br>
 
+
+
 <div class="container-fluid">
   <div class="row">
 
@@ -15,7 +17,7 @@
     </div>
 
     <div class="col-md-8 product_deats">
-
+<% cache @product do %>
     <h3><%= @product.name %></h3>
 
     <h5><%= @product.description %></h5>
@@ -23,6 +25,7 @@
         <strong>Price:</strong>
         <%= @product.price %>
     </h5>
+<% end %>
 
         <p>Average Rating: <div class="rated product_deats" data-score="<%= @product.average_rating %>"></div> </p>
         <%= render 'new_comment' %>
@@ -32,6 +35,8 @@
         <% end %></p>
         <%= hidden_field_tag(:product_id, @product.id) %>
     </div>
+
+
 
 
 <div class="row">
