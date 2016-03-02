@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { :host => 'brooklynbites.heroku.com' 
-    
+
 config.cache_store = :dalli_store,
                     (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                     {:username => ENV["MEMCACHIER_USERNAME"],
@@ -87,4 +87,8 @@ config.cache_store = :dalli_store,
                      :socket_timeout => 1.5,
                      :socket_failure_delay => 0.2
                     }
+config.action_dispatch.rack_cache = {
+  metastore: "redis://localhost:6379/1/metastore",
+  entitystore: "redis://localhost:6379/1/entitystore"
+}
 end
